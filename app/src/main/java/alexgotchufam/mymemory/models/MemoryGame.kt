@@ -18,11 +18,12 @@ class MemoryGame(private val boardSize: BoardSize) {
     }
 
     fun flipCard(position: Int): Boolean {
+        numCardFlips++
         val card = cards[position]
         // Three cases
         // 0 cards previously flipped over => restore cards + flip over the card
         // 1 card previously flipped over => flip over the card + check if the images matches
-        // 2 cards prefviously flipped over => restore cards + flip over the card
+        // 2 cards previously flipped over => restore cards + flip over the card
         var foundMatch = false
         if (indexOfSingleSelectedCard == null) {
             // 0 or 2 car previously flipped over
