@@ -48,6 +48,7 @@ class ImagePickerAdapter(
         fun bind(uri: Uri) {
             ivCustomImage.setImageURI(uri)
             ivCustomImage.setOnClickListener(null)
+
         }
 
         fun bind() {
